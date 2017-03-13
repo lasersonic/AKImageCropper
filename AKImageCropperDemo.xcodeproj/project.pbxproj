@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4356D6141B8F3DE90033FDBD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356D6131B8F3DE90033FDBD /* ImageViewController.swift */; };
-		4372FDAA1BAFD24E00D4FC79 /* AKImageCropperOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA11BAFD24E00D4FC79 /* AKImageCropperOverlayView.swift */; settings = {ASSET_TAGS = (); }; };
-		4372FDAB1BAFD24E00D4FC79 /* AKImageCropperScollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA21BAFD24E00D4FC79 /* AKImageCropperScollView.swift */; settings = {ASSET_TAGS = (); }; };
-		4372FDAC1BAFD24E00D4FC79 /* AKImageCropperTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA31BAFD24E00D4FC79 /* AKImageCropperTouchView.swift */; settings = {ASSET_TAGS = (); }; };
-		4372FDAD1BAFD24E00D4FC79 /* AKImageCropperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA41BAFD24E00D4FC79 /* AKImageCropperView.swift */; settings = {ASSET_TAGS = (); }; };
-		4372FDAE1BAFD24E00D4FC79 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA61BAFD24E00D4FC79 /* CGFloat.swift */; settings = {ASSET_TAGS = (); }; };
-		4372FDAF1BAFD24E00D4FC79 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA71BAFD24E00D4FC79 /* CGRect.swift */; settings = {ASSET_TAGS = (); }; };
-		4372FDB01BAFD24E00D4FC79 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA81BAFD24E00D4FC79 /* UIColor.swift */; settings = {ASSET_TAGS = (); }; };
-		4372FDB11BAFD24E00D4FC79 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA91BAFD24E00D4FC79 /* UIImage.swift */; settings = {ASSET_TAGS = (); }; };
+		4372FDAA1BAFD24E00D4FC79 /* AKImageCropperOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA11BAFD24E00D4FC79 /* AKImageCropperOverlayView.swift */; };
+		4372FDAB1BAFD24E00D4FC79 /* AKImageCropperScollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA21BAFD24E00D4FC79 /* AKImageCropperScollView.swift */; };
+		4372FDAC1BAFD24E00D4FC79 /* AKImageCropperTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA31BAFD24E00D4FC79 /* AKImageCropperTouchView.swift */; };
+		4372FDAD1BAFD24E00D4FC79 /* AKImageCropperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA41BAFD24E00D4FC79 /* AKImageCropperView.swift */; };
+		4372FDAE1BAFD24E00D4FC79 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA61BAFD24E00D4FC79 /* CGFloat.swift */; };
+		4372FDAF1BAFD24E00D4FC79 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA71BAFD24E00D4FC79 /* CGRect.swift */; };
+		4372FDB01BAFD24E00D4FC79 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA81BAFD24E00D4FC79 /* UIColor.swift */; };
+		4372FDB11BAFD24E00D4FC79 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372FDA91BAFD24E00D4FC79 /* UIImage.swift */; };
 		43CBB4031B870EBC00C8F9AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CBB4021B870EBC00C8F9AE /* AppDelegate.swift */; };
 		43CBB4051B870EBC00C8F9AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CBB4041B870EBC00C8F9AE /* ViewController.swift */; };
 		43CBB4081B870EBC00C8F9AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CBB4061B870EBC00C8F9AE /* Main.storyboard */; };
@@ -359,6 +359,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -396,6 +397,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -409,6 +411,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "artem.krachulov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -421,6 +424,7 @@
 				MTL_ENABLE_DEBUG_INFO = No;
 				PRODUCT_BUNDLE_IDENTIFIER = "artem.krachulov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -440,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "artem.krachulov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AKImageCropperDemo.app/AKImageCropperDemo";
 			};
 			name = Debug;
@@ -456,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "artem.krachulov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AKImageCropperDemo.app/AKImageCropperDemo";
 			};
 			name = Release;

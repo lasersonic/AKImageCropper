@@ -22,6 +22,6 @@ class AKImageCropperScollView: UIScrollView {
     
     override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
         
-        return sender.flagScrollViewGesture
+        return false
     }
 }

@@ -21,7 +21,7 @@ extension UIImage {
         
         // Create the bitmap context
         UIGraphicsBeginImageContext(rect.size)
-        let context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()!
         
         // Sets the clipping path to the intersection of the current clipping path with the area defined by the specified rectangle.
         CGContextClipToRect(context, CGRect(origin: CGPointZero, size: rect.size))
@@ -29,7 +29,7 @@ extension UIImage {
         drawInRect(CGRect(origin: CGPointMake(-rect.origin.x, -rect.origin.y), size: size))
         
         // Returns an image based on the contents of the current bitmap-based graphics context.
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
         
         UIGraphicsEndImageContext()
         

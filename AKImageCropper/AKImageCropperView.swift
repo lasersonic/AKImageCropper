@@ -431,8 +431,10 @@ class AKImageCropperView: UIView {
             let aspect = CGRectCenters(CGRect(origin: CGPointZero, size: aspectSize), inRect: self.frame)
             
             var scroll = CGRect(origin: CGPointZero, size: aspectSize)
-                scroll.insetInPlace(dx: scrollViewActiveOffset, dy: scrollViewActiveOffset)
-            
+            print(scroll)
+            scroll = scroll.insetBy(dx: scrollViewActiveOffset, dy: scrollViewActiveOffset)
+            print(scroll)
+
             return (CGRectMake(ceil(CGRectGetMinX(aspect),multiplier: 0.5), ceil(CGRectGetMinY(aspect),multiplier: 0.5), ceil(CGRectGetWidth(aspect),multiplier: 0.5), ceil(CGRectGetHeight(aspect),multiplier: 0.5)), CGRectMake(ceil(CGRectGetMinX(scroll),multiplier: 0.5), ceil(CGRectGetMinY(scroll),multiplier: 0.5), ceil(CGRectGetWidth(scroll),multiplier: 0.5), ceil(CGRectGetHeight(scroll),multiplier: 0.5)), scale)
             
         } else {
@@ -575,7 +577,7 @@ extension AKImageCropperView: AKImageCropperViewDelegate {
             path.lineWidth = 1
         
         // Vetical lines
-        for (var i = 1; i <= gridLines; i++) {
+        for i in 1 ... gridLines {
             
            let from = CGPointMake(CGRectGetMinX(cropRect) + CGRectGetWidth(cropRect) / (CGFloat(gridLines) + 1) * CGFloat(i), CGRectGetMinY(cropRect))
             
@@ -584,7 +586,7 @@ extension AKImageCropperView: AKImageCropperViewDelegate {
         }
         
         // Horizontal Lines
-        for (var i = 1; i <= gridLines; i++) {
+        for i in 1 ... gridLines {
             
             let from = CGPointMake(CGRectGetMinX(cropRect), CGRectGetMinY(cropRect) + CGRectGetHeight(cropRect) / (CGFloat(gridLines) + 1) * CGFloat(i))
             
