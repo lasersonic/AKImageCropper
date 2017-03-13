@@ -1,4 +1,4 @@
-## Note:: 
+## ::Note:: 
 
 This repo forked from [tapz/AKImageCropper](https://github.com/tapz/AKImageCropper), orignal version from [Artem Krachulov ](http://www.artemkrachulov.com/)
 
@@ -7,6 +7,7 @@ For testing and personal use because there are things that I have changed from o
 ###Change
 - Disable scroll in scrollview. (User can't zoom, can't pan image in scrollview)
 - Convert to swift 2.3
+##
 
 # AKImageCropper
 
