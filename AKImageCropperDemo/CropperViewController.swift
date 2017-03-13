@@ -88,7 +88,7 @@ class CropperViewController: UIViewController {
     // MARK: - Button Actions
     //         _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _    
     
-    @IBAction func showHideFrameBtn(sender: UIButton) {
+    @IBAction func showHideFrameBtn(_ sender: UIButton) {
         
         /**
         
@@ -102,7 +102,7 @@ class CropperViewController: UIViewController {
         
         if cropView.overlayViewIsActive {
             
-            showHideBtn.setTitle("Show Crop Frame", forState: UIControlState.Normal)
+            showHideBtn.setTitle("Show Crop Frame", for: UIControlState())
             
             cropView.dismissOverlayViewAnimated(true) { () -> Void in
                 
@@ -110,7 +110,7 @@ class CropperViewController: UIViewController {
             }
         } else {
             
-            showHideBtn.setTitle("Hide Crop Frame", forState: UIControlState.Normal)
+            showHideBtn.setTitle("Hide Crop Frame", for: UIControlState())
             
             cropView.showOverlayViewAnimated(true, withCropFrame: nil, completion: { () -> Void in
                 
@@ -119,17 +119,17 @@ class CropperViewController: UIViewController {
         }
     }
     
-    @IBAction func cropTestBtn(sender: UIBarButtonItem) {
+    @IBAction func cropTestBtn(_ sender: UIBarButtonItem) {
         
-        cropView.setCropRect(CGRectMake(50, 50, 150, 150))
+        cropView.setCropRect(CGRect(x: 50, y: 50, width: 150, height: 150))
     }
     
     // MARK: - Navigation
     //         _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let vc = segue.destinationViewController as? ImageViewController {
+        if let vc = segue.destination as? ImageViewController {
             
             vc._image = cropView.croppedImage()
         }
@@ -141,7 +141,7 @@ class CropperViewController: UIViewController {
 
 extension CropperViewController: AKImageCropperViewDelegate {
     
-    func cropRectChanged(rect: CGRect) {
+    func cropRectChanged(_ rect: CGRect) {
         
         print("New crop rectangle: \(rect)")
     }

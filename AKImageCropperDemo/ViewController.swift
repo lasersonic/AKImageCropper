@@ -27,35 +27,35 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 
     @IBAction func galleryBuutonClicked(){        
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum){
             
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum;
             imagePicker.allowsEditing = false
             
-            imagePicker.navigationBar.translucent = false
-            imagePicker.navigationBar.barStyle = .Black
-            imagePicker.navigationBar.tintColor = UIColor.whiteColor()
+            imagePicker.navigationBar.isTranslucent = false
+            imagePicker.navigationBar.barStyle = .black
+            imagePicker.navigationBar.tintColor = UIColor.white
             
-            presentViewController(imagePicker, animated: true, completion: nil)
+            present(imagePicker, animated: true, completion: nil)
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
 
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("cropper-vc") as! CropperViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "cropper-vc") as! CropperViewController
                 vc._image = pickedImage
             
             picker.pushViewController(vc, animated: true)
         }        
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     

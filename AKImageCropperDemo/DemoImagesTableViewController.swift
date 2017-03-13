@@ -23,29 +23,29 @@ class DemoImagesTableViewController: UITableViewController {
     // MARK: - Table view data source
     //         _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return section == 0 ? "Large" : "Small"
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
         return images.count
     }
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return images[section].count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 
-        let cell = tableView.dequeueReusableCellWithIdentifier("image", forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "image", for: indexPath) 
         
         let name = images[indexPath.section][indexPath.row]
         let image = UIImage(named: name)
 
         // Configure the cell...
-        cell.textLabel!.text = name.componentsSeparatedByString("-").joinWithSeparator(" ")
+        cell.textLabel!.text = name.components(separatedBy: "-").joined(separator: " ")
         cell.detailTextLabel?.text = String(format: "Size %0.1f x %0.1f", image?.size.width as CGFloat!, image?.size.height as CGFloat!)
         
         return cell
@@ -54,21 +54,21 @@ class DemoImagesTableViewController: UITableViewController {
     // MARK: - Navigation
     //         _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let selectedPath = tableView.indexPathForSelectedRow as NSIndexPath!
+        let selectedPath = tableView.indexPathForSelectedRow as IndexPath!
 
-        if let vc = segue.destinationViewController as? CropperViewController {
+        if let vc = segue.destination as? CropperViewController {
             
-            vc._image = UIImage(named: images[selectedPath.section][selectedPath.row])
+            vc._image = UIImage(named: images[(selectedPath?.section)!][(selectedPath?.row)!])
         }
     }
     
     // MARK: - Actions
     //         _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     
-    @IBAction func closeBtn(sender: UIBarButtonItem) {
+    @IBAction func closeBtn(_ sender: UIBarButtonItem) {
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
