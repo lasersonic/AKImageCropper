@@ -1,8 +1,14 @@
-# AKImageCropper
+## Note:: 
 
-<p align="center">
-    <img src="https://github.com/artemkrachulov/AKImageCropper/raw/master/Assets/Preview.png" alt="Preview">
-</p>
+This repo forked from [tapz/AKImageCropper](https://github.com/tapz/AKImageCropper), orignal version from [Artem Krachulov ](http://www.artemkrachulov.com/)
+
+For testing and personal use because there are things that I have changed from origal version.
+
+###Change
+- Disable scroll in scrollview. (User can't zoom, can't pan image in scrollview)
+- Convert to swift 2.3
+
+# AKImageCropper
 
 Image cropping plugin for iOS devices with support for landscape and portrait orientation. Cropper view allows to specify the location and size of the crop rectangle. Easy to set up. Has many settings for flexible integration into your project. The plugin is written in Swift.
 
